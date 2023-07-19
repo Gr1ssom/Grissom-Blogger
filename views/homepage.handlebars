@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog Site</title>
+</head>
+<body>
+  <header>
+    <h1>Blog Site</h1>
+    {{#if user}}
+      <a href="/logout">Logout</a>
+    {{else}}
+      <a href="/login">Login</a>
+    {{/if}}
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      {{#if user}}
+        <li><a href="/dashboard">Dashboard</a></li>
+      {{else}}
+        <li><a href="/login">Login</a></li>
+      {{/if}}
+    </ul>
+  </nav>
+  <main>
+    {{#each blogPosts}}
+      <div class="blog-post">
+        <h2>{{this.title}}</h2>
+        <p>{{this.contents}}</p>
+        <p>Created by: {{this.User.username}}</p>
+        <p>Date: {{this.createdAt}}</p>
+      </div>
+    {{/each}}
+  </main>
+</body>
+</html>

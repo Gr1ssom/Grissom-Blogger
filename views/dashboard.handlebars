@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Your Dashboard, {{user.username}}!</h1>
+    <a href="/logout">Logout</a>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Your Blog Posts</h2>
+    {{#each userPosts}}
+      <div class="blog-post">
+        <h2>{{this.title}}</h2>
+        <p>{{this.contents}}</p>
+        <p>Date: {{this.createdAt}}</p>
+        <a href="/dashboard/post/{{this.id}}">View</a>
+        <form method="POST" action="/dashboard/post/{{this.id}}/delete">
+          <button type="submit">Delete</button>
+        </form>
+      </div>
+    {{/each}}
+    <a href="/dashboard/newpost">Add New Blog Post</a>
+  </main>
+</body>
+</html>
