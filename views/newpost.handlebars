@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create New Blog Post</title>
+</head>
+<body>
+  <header>
+    <h1>Create New Blog Post</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
+    </ul>
+  </nav>
+  <main>
+    <form method="POST" action="/dashboard/newpost">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required>
+      <label for="contents">Contents:</label>
+      <textarea id="contents" name="contents" rows="4" required></textarea>
+      <button type="submit">Create Post</button>
+    </form>
+  </main>
+</body>
+</html>
