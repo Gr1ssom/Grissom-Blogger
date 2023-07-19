@@ -1,0 +1,91 @@
+/* Reset default margin and padding for all elements */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a default font family and font size */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+  
+  /* Navigation styles */
+  nav {
+    background-color: #444;
+    padding: 5px;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+  }
+  
+  /* Main content styles */
+  main {
+    margin: 20px;
+  }
+  
+  /* Blog post styles */
+  .blog-post {
+    margin-bottom: 20px;
+  }
+  
+  .blog-post h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .blog-post p {
+    line-height: 1.5;
+  }
+  
+  /* Form styles */
+  form {
+    margin-top: 10px;
+  }
+  
+  form label,
+  form input,
+  form textarea {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    header h1 {
+      font-size: 20px;
+    }
+  }
+  
